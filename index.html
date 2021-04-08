@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script  src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js">
+
+    </script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title></title>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="row">
+
+        <img src="https://www.boolean.careers/images/misc/logo.png" alt="">
+
+      </div>
+
+      <div class="row">
+        <div class="new-todo">
+          <input v-model="" type="toext" class="todo" placeholder="Nuovo todo">
+          <button type="button" class="fas fa-times" @click="clickNewTodo">Aggiungi</button>
+        </div>
+        <div class="todos-container">
+
+          <ul>
+            <!-- <li class="todo">
+              elem 1
+              <i class="fas fa-times"></i>
+            </li>
+            <li class="todo">
+              elem 2
+              <i class="fas fa-times"></i>
+            </li>
+            <li class="todo">
+              elem 3
+              <i class="fas fa-times"></i>
+            </li> -->
+
+            <li v-for="todo in todos" class="todo">
+              {{ todo }}
+              <i @click="clickDeleteTodo(index)" class="cursor-pointer fas fa-times"></i>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
