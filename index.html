@@ -23,11 +23,12 @@
       <div class="row">
         <div class="new-todo">
           <input v-model="" type="toext" class="todo" placeholder="Nuovo todo">
-          <button type="button" class="fas fa-times" @click="clickNewTodo">Aggiungi</button>
+          <button type="button" class="fas fa-times" @click="createNewTodo">Aggiungi</button>
         </div>
         <div class="todos-container">
 
-          <ul>
+          <!-- il v-if serve a vedere se nell'array è contenuto qualche elemento -->
+          <ul v-if="todos.length > 0">
             <!-- <li class="todo">
               elem 1
               <i class="fas fa-times"></i>
@@ -43,11 +44,12 @@
 
             <li v-for="todo in todos" class="todo">
               {{ todo }}
-              <i @click="clickDeleteTodo(index)" class="cursor-pointer fas fa-times"></i>
+              <i @click="deleteNewTodo(index)" class="cursor-pointer fas fa-times"></i>
             </li>
 
           </ul>
 
+          <h2 v-else>Non ci sono elementi</h2>
         </div>
       </div>
 

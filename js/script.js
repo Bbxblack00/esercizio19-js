@@ -12,11 +12,13 @@ function initVue() {
       newTodo: ''
     },
     methods: {
-      clickNewTodo: function() {
-        this.todos.push(this.newTodo);
-        this.newTodo = '';
+      CreateNewTodo: function() {
+        if (this.newTodo.length > 0) {
+          this.todos.push(this.newTodo);
+          this.newTodo = '';
+        }
       },
-      clickDeleteTodo: function(inedx) {
+      deleteNewTodo: function(inedx) {
         this.todos.splice(index, 1)
       }
     }
