@@ -16,8 +16,8 @@ function initVue() {
         this.todos.push(this.newTodo);
         this.newTodo = '';
       },
-      clickDeleteTodo: function(test) {
-        console.log('delete' + test);
+      clickDeleteTodo: function(inedx) {
+        this.todos.splice(index, 1)
       }
     }
   });
