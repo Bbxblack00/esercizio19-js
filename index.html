@@ -2,21 +2,19 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script  src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js">
+    <!-- <script  src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
 
-    </script>
-    <script src="js/script.js"></script>
+
     <link rel="stylesheet" href="css/style.css">
     <title></title>
   </head>
   <body>
 
-    <div class="container">
+    <div id="app" class="container">
 
-      <div class="row">
+      <div class="logo">
 
-        <img src="https://www.boolean.careers/images/misc/logo.png" alt="">
+        <img src="https://www.boolean.careers/images/misc/logo.png">
 
       </div>
 
@@ -43,8 +41,8 @@
             </li> -->
 
             <li v-for="todo in todos" class="todo">
-              {{ todo }}
-              <i @click="deleteNewTodo(index)" class="cursor-pointer fas fa-times"></i>
+            {{todo}}
+            <i @click="deleteNewTodo(index)" class="cursor-pointer fas fa-times"></i>
             </li>
 
           </ul>
@@ -56,4 +54,6 @@
     </div>
 
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="js/script.js"></script>
 </html>
