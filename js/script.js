@@ -5,9 +5,9 @@ function initVue() {
     data: {
 
       todos: [
-        // 'elem 1',
-        // 'elem 2',
-        // 'elem 3'
+        'elem 1',
+        'elem 2',
+        'elem 3'
       ],
       newTodo: ''
     },

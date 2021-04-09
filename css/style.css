@@ -49,6 +49,7 @@
 }
 .todo i {
     float: right;
+    color: black;
 }
 .cursor-pointer {
     cursor: pointer;
